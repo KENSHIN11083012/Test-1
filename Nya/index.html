@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="estilos.css">
+	<title>Movies</title>
+</head>
+<body>
+	
+	<h1>Registro de Películas</h1>
+
+	<form id="formPelicula">
+        <label for="titulo">Título:</label>
+        <input type="text" id="titulo" name="titulo" required>
+
+        <label for="director">Director:</label>
+        <input type="text" id="director" name="director" required>
+
+        <label for="genero">Género:</label>   
+        <input type="text" id="genero" name="genero">
+
+        <label for="fechaEstreno">Fecha de Estreno:</label>
+        <input type="date" id="fechaEstreno" name="fechaEstreno">
+
+        <button type="submit">Agregar Película</button>
+    </form>
+
+	<h1>Películas Registradas</h1>
+	<ul id="listaPeliculas"></ul>
+
+	<h1>Películas Populares</h1>
+
+	<div class="contenedor" id="contenedor"></div>
+
+	<div class="paginacion">
+		<button id="btnAnterior">Anterior</button>
+		<button id="btnSiguiente">Siguiente</button>
+	</div>
+
+	<script src="app.js"></script>
+</body>
+</html>
