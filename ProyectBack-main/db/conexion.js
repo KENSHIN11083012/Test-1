@@ -1,18 +1,21 @@
 import mongoose from 'mongoose';
 
+// URL de conexión a la base de datos
+const dBURL = 'mongodb+srv://ericksantiagoocampomarciales:LZLkgMO8pbX3qBNC@testing.do6qv.mongodb.net/?retryWrites=true&w=majority&appName=ContenidoMas18';
 
-const dBURL = 'mongodb://localhost:27017/ContenidoMas18'
-
+// Función de conexión a la base de datos
 const conexion = async () => {
   try {
-    const db = await mongoose.connect(dBURL)
-    console.log('Conexión exitosa a la base de datos')
-    return db
+    // Conectar a la base de datos
+    const db = await mongoose.connect(dBURL);
+    console.log('Conexión exitosa a la base de datos', mongoose.connection.name);
+    return db;
   } catch (error) {
-    console.error('Error al conectar a la base de datos:', error)
+    console.error('Error al conectar a la base de datos:', error);
     throw error;
   }
 };
 
-export { conexion };
-  
+
+// Exportar la función de conexión
+export { conexion }; 

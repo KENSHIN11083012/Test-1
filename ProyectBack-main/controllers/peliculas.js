@@ -1,5 +1,5 @@
 import Pija from '../models/model.js';
-import { body, validationResult } from 'express-validator';
+import { body, validationResult } from 'express-validator'; 
 
 // Middleware para validar los datos
 export const validarPelicula = [
@@ -11,6 +11,7 @@ export const validarPelicula = [
 // Agregar una película
 export async function agregar(req, res) {
     try {
+
         // Validar los datos
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
